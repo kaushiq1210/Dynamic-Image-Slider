@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="slider">
+        <div class="slide" style="--img: url('images/1.jpg')">
+          <div class="content">
+            <h2>The Silfra Rift</h2>
+            <p>Adventure is never far away</p>
+          </div>
+        </div>
+        <div class="slide" style="--img: url('images/2.jpg')">
+          <div class="content">
+            <h2>Caño Cristales</h2>
+            <p>The River Of 5 Colors</p>
+          </div>
+        </div>
+        <div class="slide" style="--img: url('images/3.jpg')">
+          <div class="content">
+            <h2>Huashan Mountain</h2>
+            <p>Road To Heaven</p>
+          </div>
+        </div>
+        <div class="slide" style="--img: url('images/4.jpg')">
+          <div class="content">
+            <h2>Pink Sands Beach</h2>
+            <p>See Something Different</p>
+          </div>
+        </div>
+        <div class="slide" style="--img: url('images/5.jpg')">
+          <div class="content">
+            <h2>The Wave</h2>
+            <p>Just Out Of A Painting</p>
+          </div>
+        </div>
+        <div class="slide" style="--img: url('images/6.jpg')">
+          <div class="content">
+            <h2>Oneuli Beach</h2>
+            <p>Spooky Yet Beautiful</p>
+          </div>
+        </div>
+        <div class="slide" style="--img: url('images/7.jpg')">
+          <div class="content">
+            <h2>Christ Of The Abyss</h2>
+            <p>Walk Amidst The Greenery</p>
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <span class="prev"></span>
+        <span class="next"></span>
+      </div>
+    </div>
+    <script>
+      let next = document.querySelector(".next");
+      let prev = document.querySelector(".prev");
+      let slider = document.querySelector(".slider");
+
+      next.addEventListener("click", function () {
+        let slides = document.querySelectorAll(".slide");
+        slider.appendChild(slides[0]);
+      });
+      prev.addEventListener("click", function () {
+        let slides = document.querySelectorAll(".slide");
+        slider.prepend(slides[slides.length - 1]);
+      });
+    </script>
+  </body>
+</html>
